@@ -2,11 +2,10 @@ def ai_move():
   bye = random.choice(get_empty_positions(board))
   last_move = []
   last_move.append(bye)
-  move_set = total_pos
   if last_move[-1] in get_empty_positions(board):
     board[bye] = 'O'
     
   if is_winner(board, 'O') is True:
-   move_set.append(last_move[-1])
+   move_plz.append(last_move[-1])
   if is_winner(board, 'X') is True:
-    move_set.remove(last_move[-1])
+    move_plz.remove(last_move[-1])
